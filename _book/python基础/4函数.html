@@ -1,0 +1,402 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>04 函数 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="3流程控制.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../gitbook使用.html">
+            
+                <a href="../gitbook使用.html">
+            
+                    
+                    gitbook使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../分发模块.html">
+            
+                <a href="../分发模块.html">
+            
+                    
+                    分发模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="1基础语法.html">
+            
+                <a href="1基础语法.html">
+            
+                    
+                    python基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="1基础语法.html">
+            
+                <a href="1基础语法.html">
+            
+                    
+                    01 基础语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="2运算符.html">
+            
+                <a href="2运算符.html">
+            
+                    
+                    02 运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="3流程控制.html">
+            
+                <a href="3流程控制.html">
+            
+                    
+                    03 流程控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.4" data-path="4函数.html">
+            
+                <a href="4函数.html">
+            
+                    
+                    04 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >04 函数</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <blockquote>
+<h2 id="4-&#x51FD;&#x6570;">4 &#x51FD;&#x6570;</h2>
+<h2 id="41-&#x51FD;&#x6570;&#x7684;&#x8BED;&#x6CD5;">4.1 &#x51FD;&#x6570;&#x7684;&#x8BED;&#x6CD5;</h2>
+<pre><code>def &#x51FD;&#x6570;&#x540D;([&#x53C2;&#x6570;]):
+    &quot;&quot;&quot;&#x51FD;&#x6570;&#x7684;&#x7B80;&#x4ECB;.
+    &#x3010;ps:&#x8FD9;&#x884C;&#x52A0;&#x7A7A;&#x683C;&#x3011;
+    &#x51FD;&#x6570;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;.
+    &quot;&quot;&quot;
+    &#x51FD;&#x6570;&#x4F53;
+    [return]
+</code></pre><h6 id="&#x6CE8;&#x91CA;">&#x6CE8;&#x91CA;</h6>
+<pre><code>&#x51FD;&#x6570;&#x540D;.__doc__
+</code></pre><h6 id="&#x53C2;&#x6570;&#x5206;&#x7C7B;">&#x53C2;&#x6570;&#x5206;&#x7C7B;</h6>
+<pre><code>1&#x3001;&#x5FC5;&#x9009;&#x53C2;&#x6570;
+2&#x3001;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;
+3&#x3001;&#x53EF;&#x53D8;&#x53C2;&#x6570;
+4&#x3001;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;
+</code></pre><h6 id="&#x5FC5;&#x9009;&#x53C2;&#x6570;">&#x5FC5;&#x9009;&#x53C2;&#x6570;</h6>
+<pre><code>#&#x5FC5;&#x987B;&#x8981;&#x4F20;&#x53C2;
+def fn(a,b):
+    print(&quot;a:&quot;,a)
+    print(&quot;b:&quot;,b)
+fn(10,20)     # a=10,b=20 
+fn(b=10,a=20) # b=10,a=20 
+fn()   # &#x9519;&#x8BEF;
+fn(10) # &#x9519;&#x8BEF;
+</code></pre><h6 id="&#x9ED8;&#x8BA4;&#x53C2;&#x6570;">&#x9ED8;&#x8BA4;&#x53C2;&#x6570;</h6>
+<pre><code># &#x7F3A;&#x7701;&#x53C2;&#x6570;
+def fn(a,b,c=10):
+    print(&quot;a:&quot;,a)
+    print(&quot;b:&quot;,b)
+    print(&quot;c:&quot;,c)
+fn(10,20)  # a=10 b=20 c=10
+fn(10,20,30) # a=10 b=20 c=30
+fn(c=30,b=20,a=10) # a=10 b=20 c=30
+fn(c=30,20,10) #&#x9519;&#x8BEF;
+# &#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x662F;&#x53D8;&#x91CF;&#xFF0C;&#x4F46;&#x662F;&#x53EA;&#x80FD;&#x6302;&#x8F7D;&#x4E00;&#x6B21;
+num = 10
+def fn(a, b, c=num):
+    print(&quot;a:&quot;, a) # 10 
+    print(&quot;b:&quot;, b) # 20
+    print(&quot;c:&quot;, c) # 10
+num = 20
+fn(10,20)
+#&#x53EF;&#x53D8;&#x53C2;&#x6570;&#x5B9E;&#x73B0;&#x6570;&#x636E;&#x5171;&#x4EAB;
+mylist = []
+def fn(a,arr=[]):
+    arr.append(a)
+    print(arr)
+fn(10) #[10]
+fn(20) #[10,20]
+fn(30) #[10,20,30]
+</code></pre><h6 id="&#x53EF;&#x53D8;&#x53C2;&#x6570;">&#x53EF;&#x53D8;&#x53C2;&#x6570;</h6>
+<pre><code># &#x63A5;&#x53D7;&#x4EFB;&#x610F;&#x4E2A;&#x6570;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5185;&#x90E8;&#x662F;&#x5143;&#x7EC4;&#x5F62;&#x5F0F;
+def fn(a,b,c=44,*args):
+print(&quot;a:&quot;,a)  # 10
+print(&quot;b:&quot;,b)  # 20
+print(&quot;c:&quot;,c)  # 30
+print(args)    # (40,)
+fn(10,20,30,40)
+</code></pre><h6 id="&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;">&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;</h6>
+<pre><code># &#x4EE5;&#x952E;&#x503C;&#x7684;&#x5F62;&#x5F0F;&#x4F20;&#x53C2;&#xFF0C;&#x5185;&#x5BB9;&#x662F;&#x5B57;&#x5178;&#x5F62;&#x5F0F;
+</code></pre><h6 id="&#x53EF;&#x53D8;&#x53C2;&#x6570;&#xFF0C;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;&#x7684;&#x6570;&#x636E;&#x89E3;&#x538B;">&#x53EF;&#x53D8;&#x53C2;&#x6570;&#xFF0C;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;&#x7684;&#x6570;&#x636E;&#x89E3;&#x538B;</h6>
+<pre><code># &#x5217;&#x8868;&#x548C;&#x5B57;&#x5178;&#x6570;&#x636E;&#x578B;&#x5F0F; -&gt; &#x6570;&#x636E;&#x538B;&#x7F29;
+# &#x5217;&#x8868;&#x89E3;&#x538B;
+def fn(*args):
+    print(args)  
+list1 = [1,2,3,4,5]
+fn(*list1)  #(1,2,3,4,5)
+# &#x5B57;&#x5178;&#x89E3;&#x538B;
+xh = {&apos;name&apos;:&apos;xh&apos;,&apos;sex&apos;:&apos;&#x5973;&apos;}
+def fn(**kwargs):
+    print(kwargs)
+list1 = [1,2,3,4,5]
+fn(**xh)
+</code></pre><h6 id="&#x4F20;&#x53C2;&#x7684;&#x987A;&#x5E8F;">&#x4F20;&#x53C2;&#x7684;&#x987A;&#x5E8F;</h6>
+<pre><code>&#x5FC5;&#x9009;&#x53C2;&#x6570;&#x3001;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#x3001;&#x53EF;&#x53D8;&#x53C2;&#x6570;&#x3001;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;
+</code></pre></blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="3流程控制.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 03 流程控制">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"04 函数","level":"1.4.4","depth":2,"previous":{"title":"03 流程控制","level":"1.4.3","depth":2,"path":"python基础/3流程控制.md","ref":"python基础/3流程控制.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"python基础/4函数.md","mtime":"2018-09-19T02:30:09.669Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-19T02:26:47.347Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
