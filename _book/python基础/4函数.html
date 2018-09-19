@@ -319,6 +319,110 @@ list1 = [1,2,3,4,5]
 fn(**xh)
 </code></pre><h6 id="&#x4F20;&#x53C2;&#x7684;&#x987A;&#x5E8F;">&#x4F20;&#x53C2;&#x7684;&#x987A;&#x5E8F;</h6>
 <pre><code>&#x5FC5;&#x9009;&#x53C2;&#x6570;&#x3001;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#x3001;&#x53EF;&#x53D8;&#x53C2;&#x6570;&#x3001;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;
+</code></pre><h6 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h6>
+<pre><code>return&#x4F5C;&#x7528;&#xFF1A;&#x8FD4;&#x56DE;&#x5E76;&#x4E14;&#x7EC8;&#x6B62;&#x51FD;&#x6570;
+return&#x6CE8;&#x610F;&#xFF1A;
+    1&#x3001;&#x53EF;&#x4EE5;&#x5199;&#x591A;&#x4E2A;return&#x8BED;&#x53E5;&#xFF0C;&#x6700;&#x7EC8;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x88AB;&#x6267;&#x884C;
+    2&#x3001;&#x4E0D;&#x80FD;&#x518D;return&#x8BED;&#x53E5;&#x4E4B;&#x540E;&#x4E66;&#x5199;&#x4EE3;&#x7801;
+    3&#x3001;return&#x53EA;&#x80FD;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x8FD4;&#x56DE;&#x591A;&#x4E2A;&#x6570;&#x636E;&#x5FC5;&#x987B;&#x4E3A;list\tuple\dict
+</code></pre><h2 id="&#x533F;&#x540D;&#x51FD;&#x6570;">&#x533F;&#x540D;&#x51FD;&#x6570;</h2>
+<pre><code>&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x8FDB;&#x884C;&#x4F20;&#x9012;&#xFF0C;&#x7B80;&#x5316;&#x7A0B;&#x5E8F;
+</code></pre><h6 id="&#x8BED;&#x6CD5;">&#x8BED;&#x6CD5;</h6>
+<pre><code>lambda a[,b] : &#x51FD;&#x6570;&#x4F53;
+&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;&#xFF0C;&#x4E4B;&#x95F4;&quot;,&quot;&#x5206;&#x5272; 
+&#x51FD;&#x6570;&#x4F53;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x5E76;&#x4E14;&#x81EA;&#x52A8;return
+</code></pre><h6 id="&#x8C03;&#x7528;&#x65B9;&#x5F0F;">&#x8C03;&#x7528;&#x65B9;&#x5F0F;</h6>
+<pre><code>1&#x3001;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x76F4;&#x63A5;&#x4F20;&#x9012;(&#x5E38;&#x7528;)
+2&#x3001;&#x7528;&#x53D8;&#x91CF;&#x8FDB;&#x884C;&#x4FDD;&#x5B58;&#xFF08;fn = lambda a,b,c: a+b+c&#xFF09;
+3&#x3001;&#x81EA;&#x8C03;&#x7528;  (lambda a,b,c: a+b+c)(1,2,3)
+</code></pre><h6 id="&#x4E3E;&#x4F8B;">&#x4E3E;&#x4F8B;</h6>
+<pre><code>fn = lambda a,b,c: a+b+c
+print(fn(1,2,3))
+# &#x7C7B;&#x4F3C;&#x4E8E;
+def fn(a,b,c):
+    return a+b+c
+</code></pre><h2 id="&#x9AD8;&#x9636;&#x51FD;&#x6570;">&#x9AD8;&#x9636;&#x51FD;&#x6570;</h2>
+<pre><code>&#x628A;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x540D;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x5230;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x4E2D;(&#x5B9E;&#x53C2;&#x9AD8;&#x9636;&#x51FD;&#x6570;)
+&#x628A;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x540D;&#x4F5C;&#x4E3A;&#x8FD4;&#x56DE;&#x503C;&#x8FD4;&#x56DE;(&#x8FD4;&#x56DE;&#x503C;&#x9AD8;&#x9636;&#x51FD;&#x6570;)
+</code></pre><h6 id="&#x5E38;&#x7528;&#x7684;&#x9AD8;&#x9636;&#x51FD;&#x6570;">&#x5E38;&#x7528;&#x7684;&#x9AD8;&#x9636;&#x51FD;&#x6570;</h6>
+<pre><code>map(fn,iter)
+map(fn,iter1,iter2)
+filter(fn,iter)
+reduce(fn,iter)
+</code></pre><h6 id="map">map</h6>
+<pre><code>list1 = [1,2,3,4,5]
+list2 = [1,2,3,4,5]
+print(list(map(lambda x,y:x+y,list1,list2)))
+# [2,4,6,8,10]
+print(list(map(lambda x:x**2,list1)))
+# [1,4,9,16,25]
+</code></pre><h6 id="filter">filter</h6>
+<pre><code>list1 = [1,2,3,4,5]
+print(list(filter(lambda x:x%2==0,list1)))
+</code></pre><h6 id="reduce">reduce</h6>
+<pre><code>from functools import reduce
+list1 = [1,2,3,4,5]
+def fn(x,y):
+    print(&quot;x:&quot;,x,end=&quot;  &quot;)
+    print(&quot;y:&quot;,y,end=&quot;  &quot;)
+    print(&quot;x+y&quot;,x+y)
+    return x+y
+reduce(fn,list1)
+</code></pre><h2 id="&#x5C40;&#x90E8;&#x73AF;&#x5883;&#x5168;&#x5C40;&#x73AF;&#x5883;">&#x5C40;&#x90E8;&#x73AF;&#x5883;&#x5168;&#x5C40;&#x73AF;&#x5883;</h2>
+<pre><code>&#x51FD;&#x6570;&#x5185;&#x79F0;&#x4E3A;&#x5C40;&#x90E8;&#x73AF;&#x5883;&#xFF0C;&#x5C40;&#x90E8;&#x73AF;&#x5883;&#x5185;&#x7684;&#x53D8;&#x91CF;&#x5C31;&#x662F;&#x5C40;&#x90E8;&#x53D8;&#x91CF;
+&#x6574;&#x4E2A;.py&#x6587;&#x4EF6;&#x4E2D;&#x4E3A;&#x5168;&#x5C40;&#x73AF;&#x5883;&#xFF0C;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x5728;&#x6574;&#x4E2A;.py&#x4E2D;&#x90FD;&#x80FD;&#x8BBF;&#x95EE;&#x53D8;&#x91CF;
+&#x901A;&#x8FC7;dir()&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x5168;&#x5C40;&#x73AF;&#x5883;&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x4EE5;&#x53CA;&#x5C40;&#x90E8;&#x73AF;&#x5883;&#x4E2D;&#x7684;&#x53D8;&#x91CF;
+</code></pre><h6 id="globel-nonlocal-&#x8BED;&#x53E5;">globel nonlocal &#x8BED;&#x53E5;</h6>
+<pre><code>globel &#x5168;&#x5C40;&#x53D8;&#x91CF;&#x58F0;&#x660E;&#xFF08;&#x4E0D;&#x80FD;&#x7533;&#x660E;&#x7684;&#x540C;&#x65F6;&#x8D4B;&#x503C;&#xFF09;
+nonlocal &#x975E;&#x5C40;&#x90E8;&#x975E;&#x5168;&#x5C40;&#x58F0;&#x660E;
+</code></pre><h2 id="&#x95ED;&#x5305;&#x51FD;&#x6570;">&#x95ED;&#x5305;&#x51FD;&#x6570;</h2>
+<pre><code>&#x5F53;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x53D1;&#x751F;&#x5D4C;&#x5957;&#x5173;&#x7CFB;&#x65F6;&#xFF0C;&#x5185;&#x5C42;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x4E86;&#x5916;&#x5C42;&#x51FD;&#x6570;&#x7684;&#x53D8;&#x91CF;&#x3002;&#x5F53;&#x5728;&#x5916;&#x90E8;&#x8C03;&#x7528;&#x5185;&#x5C42;&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x6B64;&#x523B;&#x53D1;&#x751F;&#x4E86;&#x95ED;&#x5305;&#x3002;
+</code></pre><h2 id="&#x9012;&#x5F52;">&#x9012;&#x5F52;</h2>
+<pre><code>&#x81EA;&#x5DF1;&#x8C03;&#x7528;&#x81EA;&#x5DF1;
+&#x672C;&#x8D28; &#x76F8;&#x5F53;&#x4E8E;&#x5FAA;&#x73AF;
+&#x5FC5;&#x987B;&#x6709;&#x7EC8;&#x6B62;
+</code></pre><h2 id="&#x88C5;&#x9970;&#x5668;">&#x88C5;&#x9970;&#x5668;</h2>
+<h6 id="&#x5B9A;&#x4E49;">&#x5B9A;&#x4E49;</h6>
+<pre><code>&#x7ED9;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x589E;&#x52A0;&#x65B0;&#x7684;&#x529F;&#x80FD;
+</code></pre><h6 id="&#x5E94;&#x7528;&#x573A;&#x666F;">&#x5E94;&#x7528;&#x573A;&#x666F;</h6>
+<pre><code>&#x5F53;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x4E0A;&#x7EBF;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x8981;&#x589E;&#x52A0;&#x4ED6;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x5C31;&#x5E0C;&#x671B;&#x4E0D;&#x8981;&#x8FC7;&#x591A;&#x7684;&#x6539;&#x53D8;&#x6E90;&#x4EE3;&#x7801;&#x3002;
+</code></pre><h6 id="&#x6761;&#x4EF6;">&#x6761;&#x4EF6;</h6>
+<pre><code>1&#x3001;&#x4E0D;&#x80FD;&#x6539;&#x53D8;&#x6E90;&#x4EE3;&#x7801;
+2&#x3001;&#x4E0D;&#x80FD;&#x6539;&#x53D8;&#x6E90;&#x4EE3;&#x7801;&#x7684;&#x8C03;&#x7528;&#x65B9;&#x5F0F;
+3&#x3001;&#x6EE1;&#x8DB3;1&#x548C;2&#x57FA;&#x7840;&#x4E0A;&#x6765;&#x589E;&#x52A0;&#x65B0;&#x529F;&#x80FD;
+</code></pre><h6 id="&#x516C;&#x5F0F;">&#x516C;&#x5F0F;</h6>
+<pre><code>&lt;&#x51FD;&#x6570;+&#x95ED;&#x5305;+&#x9AD8;&#x9636;&#x51FD;&#x6570;+&#x8BED;&#x6CD5;&#x7CD6;=&#x88C5;&#x9970;&#x5668;&gt;
+</code></pre><h6 id="&#x67EF;&#x91CC;&#x5316;">&#x67EF;&#x91CC;&#x5316;</h6>
+<pre><code>def fn(a):
+    def fn1(b):
+        def fn2(c):
+            print(a+b+c)
+        return fn2
+    return fn1
+fn(10)(20)(30)
+</code></pre><h6 id="&#x88C5;&#x9970;&#x5668;&#x4F20;&#x53C2;">&#x88C5;&#x9970;&#x5668;&#x4F20;&#x53C2;</h6>
+<pre><code>import time
+def timer(a,b):
+    def timer1(fn):
+        def newfn():
+            start = time.time()
+            fn()
+            end = time.time()
+            print(a,b)
+            print(&quot;&#x8FD0;&#x884C;&#x603B;&#x65F6;&#x95F4;:%s&quot;%(end-start))
+        return newfn
+    return timer1
+def starttime(fn):
+    def newfn():
+        print(&quot;&#x5F00;&#x59CB;&#x65F6;&#x95F4;&#xFF1A;%s&quot;%time.time())
+        fn()
+    return newfn 
+@starttime
+@timer(10,20)
+def fn():
+    time.sleep(1)
+    print(&quot;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&quot;)
+fn()
 </code></pre></blockquote>
 
                                 
@@ -359,7 +463,7 @@ fn(**xh)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"04 函数","level":"1.4.4","depth":2,"previous":{"title":"03 流程控制","level":"1.4.3","depth":2,"path":"python基础/3流程控制.md","ref":"python基础/3流程控制.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"python基础/4函数.md","mtime":"2018-09-19T02:30:09.669Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-19T02:46:12.248Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"04 函数","level":"1.4.4","depth":2,"previous":{"title":"03 流程控制","level":"1.4.3","depth":2,"path":"python基础/3流程控制.md","ref":"python基础/3流程控制.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"python基础/4函数.md","mtime":"2018-09-19T08:14:02.714Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-19T08:14:24.173Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
